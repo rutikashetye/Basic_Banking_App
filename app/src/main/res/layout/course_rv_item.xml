@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/idTVCustName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Customer Name"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idTVCustName"
+            android:rowCount="1"
+            android:columnCount="2"
+            >
+
+            <TextView
+                android:id="@+id/idTVAccNo"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:padding="5dp"
+                android:text="Acc no"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/idTVBalance"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:padding="5dp"
+                android:text="Balance"
+                android:textColor="@color/black" />
+        </GridLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

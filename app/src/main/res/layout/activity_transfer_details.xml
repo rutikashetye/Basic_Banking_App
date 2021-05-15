@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgrnd"
+    tools:context=".TransferDetails">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center_horizontal"
+        android:text="Transfer Details"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/transferdetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="152dp"
+        android:layout_weight="1"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:gravity="center_horizontal"
+        android:padding="40dp"
+        android:rowCount="6"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:padding="5dp"
+            android:text="Sender's Name: "
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/idTVSenderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:padding="5dp"
+            android:text=""
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:padding="5dp"
+            android:text="Current Balance: "
+            android:textColor="@color/teal_700" />
+
+        <TextView
+            android:id="@+id/idTVSenderCurrBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:padding="5dp"
+            android:text=""
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:padding="5dp"
+            android:text="Amount to Transfer:"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/idTVsendAmt"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/idTVRecName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:padding="5dp"
+            android:text="Reciever's Name: "
+            android:textColor="@color/black" />
+
+        <Spinner
+            android:id="@+id/spinnerRec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="1" />
+        <Button
+            android:id="@+id/idTVCancel"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:textAlignment="center"
+            android:color="@color/cancel"
+            android:drawableLeft="@drawable/cancel_icon"
+            android:padding="5dp"
+            android:text="Cancel"
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/idTVSend"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:text="Send"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal" />
+    </GridLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="200dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="64dp"
+        android:background="#FF3700B3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transferdetail" />
+
+    <ImageButton
+        android:id="@+id/history"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_gravity="center"
+        android:src="@drawable/historysmall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.798" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
